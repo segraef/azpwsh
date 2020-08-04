@@ -1,13 +1,14 @@
 Param( 
   [string]$inlineScript,
   [string]$script,
-  [string]$azPSVersion = 'latest'
+  [string]$azPSVersion
 )
 
-Write-Host "InvocationName:" $MyInvocation.InvocationName
-Write-Host "Path:" $MyInvocation.MyCommand.Path
-Write-Host "Script:" $PSCommandPath
-Write-Host "Path:" $PSScriptRoot
+Write-Output "############"
+Write-Output "InvocationName:" $MyInvocation.InvocationName
+Write-Output "Path:" $MyInvocation.MyCommand.Path
+Write-Output "Script:" $PSCommandPath
+Write-Output "Path:" $PSScriptRoot
 
 $context = Get-AzContext
 if (!$context) {
@@ -26,11 +27,14 @@ Try {
     Invoke-Expression -Command $script
   }
 
-  if ($azPSVersion -ne 'latest') {
+  if ($azPSVersion -eq 'latest') {
     Write-Output "##########`nazPSVersion`n##########"
+    Write-Output "##########`nUse latest"
+  } else {
     Install-Module -Name Az -RequiredVersion $azPSVersion
     Import-Module -Name Az -RequiredVersion $azPSVersion
   }
+
 }
 Catch {
   $_.Exception.Message
