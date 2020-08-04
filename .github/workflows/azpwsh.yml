@@ -22,7 +22,7 @@ jobs:
     - name: Azure PowerShell Script
       uses: segraef/azpwsh@v1
       with:
-        script: "./script.ps1"
+        script: "scripts/script.ps1"
     - name: Azure PowerShell Inline Script
       uses: segraef/azpwsh@v1
       with:
