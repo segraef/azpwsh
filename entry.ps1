@@ -1,7 +1,7 @@
 Param( 
   [string]$inlineScript,
   [string]$script,
-  [string]$azPSVersion = 'latest',
+  [string]$azPSVersion = 'latest'
 )
 
 Write-Host "InvocationName:" $MyInvocation.InvocationName
