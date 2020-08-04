@@ -23,8 +23,8 @@ jobs:
     #   uses: segraef/azpwsh@v1
     #   with:
     #     script: "scripts/script.ps1"
-    # - name: Azure PowerShell Inline Script
-    #   uses: segraef/azpwsh@v1
-    #   with:
-    #     inlinescript: |
-    #       Get-Location
+    - name: Azure PowerShell Inline Script
+      uses: segraef/azpwsh@v1
+      with:
+        inlinescript: |
+          Get-Location
