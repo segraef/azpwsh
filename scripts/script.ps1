@@ -1,1 +1,2 @@
 Get-Location
+$PSVersionTable
