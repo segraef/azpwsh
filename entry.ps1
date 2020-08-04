@@ -21,7 +21,12 @@ Try {
     Invoke-Expression -Command $inlineScript
   }
 
-  if ($azPSVersion -notlike 'latest') {
+  if ($inlineScript) {
+    Write-Output "##########`ninlineScript`n"
+    Invoke-Expression -Command $script
+  }
+
+  if ($azPSVersion -ne 'latest') {
     Write-Output "##########`nazPSVersion`n##########"
     Install-Module -Name Az -RequiredVersion $azPSVersion
     Import-Module -Name Az -RequiredVersion $azPSVersion

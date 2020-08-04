@@ -19,10 +19,10 @@ jobs:
         tenantId: "${{ secrets.tenantId }}"
         subscriptionId: "${{ secrets.subscriptionId }}"
         identity: "no"
-    # - name: Azure PowerShell Script
-    #   uses: segraef/azpwsh@v1
-    #   with:
-    #     script: "scripts/script.ps1"
+    - name: Azure PowerShell Script
+      uses: segraef/azpwsh@v1
+      with:
+        script: "scripts/script.ps1"
     - name: Azure PowerShell Inline Script
       uses: segraef/azpwsh@v1
       with:
