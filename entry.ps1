@@ -22,7 +22,7 @@ Try {
     Invoke-Expression -Command $inlineScript
   }
 
-  if ($inlineScript) {
+  if ($script) {
     Write-Output "##########`ninlineScript`n"
     Invoke-Expression -Command $script
   }
@@ -31,8 +31,8 @@ Try {
     Write-Output "##########`nazPSVersion`n##########"
     Write-Output "##########`nUse latest"
   } else {
-    Install-Module -Name Az -RequiredVersion $azPSVersion
-    Import-Module -Name Az -RequiredVersion $azPSVersion
+    #Install-Module -Name Az -RequiredVersion $azPSVersion
+    #Import-Module -Name Az -RequiredVersion $azPSVersion
   }
 
 }
