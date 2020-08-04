@@ -18,18 +18,18 @@ if (!$context) {
 
 Try {
   if ($inlineScript) {
-    Write-Output "##########`ninlineScript`n"
+    Write-Output "##########`n inlineScript`n"
     Invoke-Expression -Command $inlineScript
   }
 
   if ($script) {
-    Write-Output "##########`ninlineScript`n"
+    Write-Output "##########`n script`n"
     Invoke-Expression -Command $script
   }
 
   if ($azPSVersion -eq 'latest') {
-    Write-Output "##########`nazPSVersion`n##########"
-    Write-Output "##########`nUse latest"
+    Write-Output "##########`n azPSVersion`n##########"
+    Write-Output "##########`n Use latest"
   } else {
     #Install-Module -Name Az -RequiredVersion $azPSVersion
     #Import-Module -Name Az -RequiredVersion $azPSVersion
