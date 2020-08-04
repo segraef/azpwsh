@@ -1,7 +1,7 @@
 Param( 
   [string]$inlineScript,
   [string]$script,
-  [string]$azPSVersion
+  [string]$azPSVersion = 'latest'
 )
 
 Write-Output "############"
