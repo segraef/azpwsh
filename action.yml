@@ -4,6 +4,9 @@ inputs:
   inlineScript:
     description: 'Specify the Az PowerShell script here.'
     required: true
+  script:
+    description: 'Specify the Az PowerShell inlinescript here.'
+    required: false
   azPSVersion:
     description: '123'
     required: false
