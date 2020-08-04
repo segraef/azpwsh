@@ -13,5 +13,7 @@ runs:
   args:
     - -inlineScript
     - ${{ inputs.inlineScript }}
+    - -script
+    - ${{ inputs.script }}
     - -azPSVersion
     - ${{ inputs.azPSVersion }}

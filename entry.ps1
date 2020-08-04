@@ -1,6 +1,6 @@
 Param( 
   [string]$inlineScript,
-  [string]$script
+  [string]$script,
   [string]$azPSVersion = 'latest',
 )
 
