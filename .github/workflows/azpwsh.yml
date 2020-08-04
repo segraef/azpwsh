@@ -1,4 +1,4 @@
-name: azdeploy
+name: azpwsh
 
 on:
   push:
